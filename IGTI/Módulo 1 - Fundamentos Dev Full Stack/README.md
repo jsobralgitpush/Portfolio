@@ -1,61 +1,8 @@
-**
+# Desafio do Módulo 1 {#quiz_title}
 
-Você precisa ter JavaScript ativado para ter acesso a essa página.
-==================================================================
+- Entrega 27 mai em 17:00
 
-** Painel de controle
-
-[Bootcamp Online - Desenvolvedor Full Stack
-**](https://igti.instructure.com/courses/2935)
-
-[Pular para
-Conteúdos](https://igti.instructure.com/courses/2935/quizzes/34909?module_item_id=191131#content)
-
-[Painel de controle](https://igti.instructure.com/)
-
--   [](https://igti.instructure.com/profile)
-    ![José Augusto Sobral
-    Mancebo](./Desafio%20do%20Módulo%201_%20Bootcamp%20Online%20-%20Desenvolvedor%20Full%20Stack_files/46af0bb1-a005-4635-91fe-be29c313a11d)
-    Conta
--   [](https://igti.instructure.com/)
-    Painel
--   [](https://igti.instructure.com/courses)
-    Disciplinas
--   [](https://igti.instructure.com/calendar)
-    Calendário
--   [](https://igti.instructure.com/conversations)
-    Caixa de entrada
--   [](http://help.instructure.com/)
-    Dúvidas
-
--   
-
-[Fechar](https://igti.instructure.com/courses/2935/quizzes/34909?module_item_id=191131#)
-
-**
-
--   [*Meu painel de controle*](https://igti.instructure.com/)
--   [Bootcamp Online - Desenvolvedor Full
-    Stack](https://igti.instructure.com/courses/2935)
--   [Questionários](https://igti.instructure.com/courses/2935/quizzes)
--   [Desafio do Módulo
-    1](https://igti.instructure.com/courses/2935/quizzes/34909)
-
--   [Página
-    inicial](https://igti.instructure.com/courses/2935 "Página inicial")
--   [Notas](https://igti.instructure.com/courses/2935/grades "Notas")
-
-Desafio do Módulo 1 {#quiz_title}
-===================
-
--   Entrega 27 mai em 17:00
--   Pontos 40
--   Perguntas 15
--   Disponível até 27 mai em 17:00
--   Limite de tempo Nenhum
-
-Instruções
-----------
+## Instruções
 
 **Informações sobre o Desafio**
 
@@ -83,22 +30,18 @@ Bons estudos!
 
 Exercitar os seguintes conceitos trabalhados no Módulo:
 
--   Declarar elementos HTML como títulos, input, div, span, ul, li etc.
--   Estilizar o app com CSS.
--   Mapear elementos do DOM para serem manipulados com JavaScript.
--   Formatar valores com JavaScript.
--   Realizar diversos cálculos com array methods como map, filter e
-    reduce.
--   Realizar requisições HTTP com o comando fetch.
-
- 
+- Declarar elementos HTML como títulos, input, div, span, ul, li etc.
+- Estilizar o app com CSS.
+- Mapear elementos do DOM para serem manipulados com JavaScript.
+- Formatar valores com JavaScript.
+- Realizar diversos cálculos com array methods como map, filter e
+  reduce.
+- Realizar requisições HTTP com o comando fetch.
 
 **Enunciado**
 
 Criar uma aplicação para filtrar usuários e mostrar estatísticas a
 partir do filtro definido.
-
- 
 
 **Atividades**
 
@@ -122,7 +65,7 @@ Os alunos deverão desempenhar as seguintes atividades:
 
 **Tela inicial da aplicação (sugestão):      **
 
-**![d1.png](./Desafio%20do%20Módulo%201_%20Bootcamp%20Online%20-%20Desenvolvedor%20Full%20Stack_files/d1.png)**
+**![d1.png](imagens/d1.png)**
 
 **Tela após filtro "santos":**
 
@@ -146,7 +89,7 @@ Os alunos deverão desempenhar as seguintes atividades:
 7.  Quebre o seu código em funções bem definidas.
 8.  Será necessária uma boa dose de manipulação manual do DOM. Isso pode
     ser feito tanto com innerHTML + string (recomendo a utilização de
-    *template literals*) ou com os comandos document.createElement,
+    _template literals_) ou com os comandos document.createElement,
     appendChild etc.
 9.  Se quiserem fazer uma interface semelhante à das imagens, utilizem o
     Materialize ([https://materializecss.com (Links para um site
@@ -154,7 +97,7 @@ Os alunos deverão desempenhar as seguintes atividades:
 10. Não deixem de assistir o vídeo desse desafio, onde demonstro a
     aplicação em funcionamento e dou mais algumas dicas.
 
-** **
+\*\* \*\*
 
 **Respostas Finais**
 
@@ -164,9 +107,9 @@ seguintes questões objetivas:
 [Fazer o
 teste](https://igti.instructure.com/courses/2935/quizzes/34909/take?user_id=38152)
 
-[**Anterior Anterior: Informações sobre o
+[\*\*Anterior Anterior: Informações sobre o
 desafio](https://igti.instructure.com/courses/2935/modules/items/191175)
-[Próximo** Próximo: Segunda Aula Interativa do Módulo
+[Próximo\*\* Próximo: Segunda Aula Interativa do Módulo
 1](https://igti.instructure.com/courses/2935/modules/items/190730)
 
 32c40000-8b5f-43cb-a898-d255b170e5a6
