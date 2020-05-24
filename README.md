@@ -2,17 +2,19 @@
 
 **Codenation**
 
-Participei de um [processo seletivo da Codenation em parceria com a Stone](https://canaltech.com.br/cursos/stone-e-codenation-oferecem-cursos-online-gratuitos-de-programacao-163961/) para um programa de 10 semanas de aceleração de desenvolvedores python.
+- Participei de um [processo seletivo da Codenation em parceria com a Stone](https://canaltech.com.br/cursos/stone-e-codenation-oferecem-cursos-online-gratuitos-de-programacao-163961/) para um programa de 10 semanas de aceleração de desenvolvedores python.
 
-Felizmente passei no programa e nesta pasta encontram-se os projetos que desenvolvi ao longo dessa jornada.
+- Felizmente passei no programa e nesta pasta encontram-se os projetos que desenvolvi ao longo dessa jornada.
 
 **CS50 Harvard**
 
+```
 Para melhorar minha base de computação, comecei a fazer o curso CS50 online de Harvard, de 10 semanas. Ao longo do curso trabalhamos diversos conceitos de computação (algoritmos, estrutura de dados, memoria computacional, etc) e, ao final de cada semana, temos que entregar um conjunto de desafios que compilam o conteúdo do módulo da semana.
 
 Tem sido uma experiência bastante desafiadora (e muito divertida).
 
 Nesta pasta encontram-se a resolução dos desafios que fiz até então. Até o presente momento, já fiz 7 dos 10 desafios.
+```
 
 **Disciplina metodos numericos**
 
