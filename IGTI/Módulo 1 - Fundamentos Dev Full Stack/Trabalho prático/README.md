@@ -1,10 +1,6 @@
 # Trabalho Prático do Módulo 1
 
 - Entrega 20 mai em 17:00
-- Pontos 25
-- Perguntas 15
-- Disponível até 20 mai em 17:00
-- Limite de tempo Nenhum
 
 ## Instruções
 
