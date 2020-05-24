@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[66]:
 
 
 #importando as bibliotecas necessárias
@@ -10,8 +6,6 @@ import pandas as pd
 
 print (">>Bibliotecas importadas com sucesso :)")
 
-
-# In[ ]:
 
 
 #comando base para nos conectarmos a base de dados SQL localmente no computador do usuário. Alguns cuidados:
@@ -33,9 +27,6 @@ conn = retornar_conexao_sql()
 print (">>a conexao com o banco de dados foi realizada com sucesso :)")
 
 
-# In[67]:
-
-
 
 #função para consultarmos dados do banco (GET)
 #para usar esta função, os dados devem ser inseridos como string
@@ -45,9 +36,6 @@ def get_dados(coluna, tabela, condicao1, condicao2):
     dados = pd.read_sql(sql, conn)
     return dados
     print (">>Ta ai sua base de dados, oh :)")
-
-
-# In[58]:
 
 
 #função para inserirmos dados no banco (PUT)
@@ -83,10 +71,6 @@ def put_dados(tabela, coluna1, coluna2=None, coluna3=None, coluna4=None, coluna5
     print (">>Você conseguiu colocar seus dados na base de dados :)")
         
 
-
-# In[43]:
-
-
 #função para excluirmos dados do banco (DELETE)
 #para usar esta função, os dados devem ser inseridos como string
 
@@ -97,9 +81,6 @@ def get_dados(coluna, tabela, condicao1, condicao2):
     print (">>Ta ai sua base de dados, oh :)")
 
 
-# In[68]:
-
-
 def retornar_conexao_sql():
     server = "DESKTOP-EJF16R5\MSSQL"
     database = "teste"
@@ -108,26 +89,7 @@ def retornar_conexao_sql():
     return conexao
 
 
-# In[24]:
-
-
 dados = pd.read_sql(sql, conn)
-
-
-# In[71]:
-
-
-a=input()
-
-
-# In[72]:
-
-
-a
-
-
-# In[ ]:
-
 
 
 
