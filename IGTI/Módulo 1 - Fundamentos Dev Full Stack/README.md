@@ -69,7 +69,7 @@ Os alunos deverão desempenhar as seguintes atividades:
 
 **Tela após filtro "santos":**
 
-**![d2.png](./Desafio%20do%20Módulo%201_%20Bootcamp%20Online%20-%20Desenvolvedor%20Full%20Stack_files/d2.png)**
+**![d2.png](imagens/d2.png)**
 
 **Dicas**
 
