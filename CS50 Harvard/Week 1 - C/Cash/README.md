@@ -7,8 +7,6 @@ use CS50 IDE instead by following the instructions below!
 
 ## [Greedy Algorithms](https://cs50.harvard.edu/x/2020/psets/1/cash/#greedy-algorithms)
 
-![US coins](./week%201%20Cash%20-%20CS50x_files/coins.jpg)
-
 When making change, odds are you want to minimize the number of coins
 you’re dispensing for each customer, lest you run out (or annoy the
 customer!). Fortunately, computer science has given cashiers everywhere
