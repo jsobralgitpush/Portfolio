@@ -32,7 +32,7 @@ Heroku
 O desafio que propomos é escrever uma API REST, usando Python, Node ou Java que
 realizará operações em um banco de dados de funcionários.
 
-## Requisitos
+**Requisitos**
 
 Um funcionário deve possuir como atributos: Id , Idade , Nome e Cargo<br/>
 Salvar as informações necessárias em um banco de dados relacional de sua
@@ -40,7 +40,7 @@ escolha<br/>
 Gerar logs das ações<br/>
 Documentar como rodar o projeto<br/>
 
-## Operações Desejadas
+**Operações Desejadas**
 
 Implementar métodos:
 1.GET
@@ -50,7 +50,7 @@ Implementar métodos:
 
 # Desafio 02
 
-# Desafio Ton Tecnologia RC
+**Desafio Ton Tecnologia RC**
 
 O desafio que propomos é escrever uma API REST, usando Python, Node ou Java que
 realizará operações em um banco de dados de funcionários.
@@ -59,7 +59,7 @@ Além disso, criar uma interface gráfica usando um framework Javascript a sua e
 (Angular, React ...). Essa interface deve servir para o usuário conseguir buscar ou inserir
 informações de funcionários lançadas no sistema sempre se conectando a API criada.
 
-## Requisitos
+**Requisitos**
 
 Um funcionário deve possuir como atributos : Id , Idade , Nome e Cargo<br/>
 Salvar as informações necessárias em um banco de dados relacional de sua
@@ -67,7 +67,7 @@ escolha<br/>
 Gerar logs das ações<br/>
 Documentar como rodar o projeto<br/>
 
-## Operações Desejadas
+**Operações Desejadas**
 
 Implementar métodos:
 1.GET
@@ -81,9 +81,9 @@ Busca por funcionários:
 Desenvolver uma tela onde o usuário consiga realizar a escolha de filtros e visualizar
 uma lista de funcionários com as características desejadas.
 
-# Desafio 0 3
+# Desafio 03
 
-**# Desafio do Cartão de Multi** - **Crédito**
+**Desafio do Cartão de Multi** - **Crédito**
 
 Você acabou de criar sua primeira conta no banco e ficou muito feliz por ter seu
 primeiro cartão de crédito, mas ficou desconfortável com o fato de o banco
@@ -135,12 +135,12 @@ O melhor cartão deverá ser escolhido com base na data de vencimento da fatura
 e limite disponível de cada cartão, nesta ordem de prioridade. Você listou
 algumas features necessárias para que o produto comece a rodar:
 
-## Gerenciar uma wallet
+**Gerenciar uma wallet**
 
 Wallet é a entidade que representa o seu produto. É nela que todos os cartões
 estarão armazenados.
 
-### Premissas de uma wallet
+**Premissas de uma wallet**
 
 *Uma wallet pode possuir vários cartões (motivo disso tudo)
 *Uma wallet só pode pertencer a um user
@@ -154,17 +154,17 @@ estarão armazenados.
 - Executar a ação de uma compra de determinado valor de acordo com as
   prioridades citadas anteriormente
 
-## Gerenciar um cartão de crédito
+**Gerenciar um cartão de crédito**
 
 O cartão é a entidade que representa o cartão de crédito.
 
-### Premissas de um cartão
+**Premissas de um cartão**
 
 - Possuir as propriedades necessárias para realizar uma compra (número, data
   de vencimento, data de validade, nome impresso, cvv e limite)
 - Se capaz de liberar crédito (pagar determinado valor na conta do cartão)
 
-# O que esperamos
+**O que esperamos**
 
 A ideia é construir uma API com os endpoints necessários para que o seu
 produto saia do papel. É importante que seja um projeto completo, seguro, pronto
