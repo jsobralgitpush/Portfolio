@@ -1,32 +1,18 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[ ]:
-
-
-#Opção 1: Twilio
-
-
-# In[ ]:
-
+##############################################################
+#USANDO A FERRAMENTA TWILlIO
+##############################################################
 
 from twilio.rest import Client
 
-
-# In[ ]:
 
 
 client = Client()
 
 
-# In[ ]:
-
-
 from_whatsapp_number='whatsapp:+5511951280054'
 to_whatsapp_number='whatsapp:+5521980591606'
 
-
-# In[ ]:
 
 
 client.messages.create(body='É só um test, meu irmão!!!',
@@ -34,20 +20,10 @@ client.messages.create(body='É só um test, meu irmão!!!',
                        to=to_whatsapp_number)
 
 
-# In[ ]:
 
-
-#--------------------------------------------------------------------------------
-
-
-# In[ ]:
-
-
-#Opção 2: Selenium
-
-
-# In[ ]:
-
+##############################################################
+#USANDO O SELENIUM
+##############################################################
 
 import json
 import os
@@ -56,8 +32,6 @@ from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.firefox.options import Options
 
-
-# In[ ]:
 
 
 base_url = 'https://web.whatsapp.com/'
@@ -84,27 +58,49 @@ mensagem.send_keys('Testando mensagem :)')
 enviar_mensagem = driver.find_element_by_xpath('/html/body/div[1]/div/div/div[4]/div/footer/div[1]/div[3]/button/span')
 enviar_mensagem.click()
 
-
-# In[ ]:
-
-
-#--------------------------------------------------------------------------------
+##############################################################
+#USANDO O CHAT-API
+##############################################################
 
 
-# In[ ]:
+import json
+import requests
+
+class WABot():
+    def __init__(self):
+        self.APIUrl = 'privado'
+        self.token = 'privado'
+
+    def send_requests(self, method, data):
+        url = f"{self.APIUrl}{method}?token={self.token}"
+        headers = {'Content-type': 'application/json'}
+        answer = requests.post(url, data=json.dumps(data), headers=headers)
+        return answer.json()
+
+    def send_message(self, chatID, text):
+        data = {"phone": chatID, "body": text}
+        answer = self.send_requests('sendMessage', data)
+        return answer
+
+    def send_link(self, phone, body, preview, title):
+        data = {"phone": phone, "body": body, "previewBase64": preview, "title": title}
+        answer = self.send_requests('sendLink', data)
+        return answer
+
+    def send_image(self, phone, body, filename, caption):
+        data = {"phone": phone, "body": body, "filename": filename, "caption": caption}
+        answer = self.send_requests('sendFile', data)
+        return answer
 
 
+#Envio de mensagem de texto
+myphone = 5521980591606
+body = "www.seufelix.com.br"
+teste.send_message(myphone, body)
 
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
+#Envio de imagem
+myphone = 5521980591606
+body_one = "https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg"
+filename = "teste.jpg"
+caption = "Voilá"
+print(teste.send_image(myphone, body_one, filename, caption))
