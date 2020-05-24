@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[34]:
-
-
 #Importando bibliotecas que serão utilizados
 import requests
 import json
@@ -14,14 +8,8 @@ import cgitb
 import os
 
 
-# In[10]:
-
-
 #Acessando o arquivo JSON do desafio
 get_json = requests.get('https://api.codenation.dev/v1/challenge/dev-ps/generate-data?token=777d8364b94bec6faf8133b9ea96a41e62b142b6')
-
-
-# In[11]:
 
 
 #Salvando o arquivo JSON no modelo answer.json como solicitado
@@ -34,14 +22,8 @@ with open('answer.json', 'w') as f:
     f.write(json_str)
 
 
-# In[12]:
-
-
 #Teste do arquivo get_json
 get_json.json()
-
-
-# In[13]:
 
 
 #Decifrando o código
@@ -71,14 +53,9 @@ for i in lista_index_cifrado:
 json_file['decifrado'] = str_decrypt
 
 
-# In[14]:
-
 
 #Resumo criptográfico com a biblioteca hashlib
 json_file['resumo_criptografico'] = hashlib.sha1(str_decrypt.encode('utf-8')).hexdigest()
-
-
-# In[16]:
 
 
 #Transformando json_file em string para podermos escrever o arquivo answer
@@ -92,35 +69,8 @@ answer = json_file
 print(answer)
 
 
-# In[53]:
-
-
 #Enviando a resposta
 files = {'answer': ('answer.json', open('answer.json', 'rb'), 'json', {'Expires': '0'})}
 response = requests.post(url, files=files)
 print(response.text)
-
-
-# In[37]:
-
-
-
-
-
-# In[40]:
-
-
-
-
-
-# In[50]:
-
-
-
-
-
-# In[55]:
-
-
-
 
