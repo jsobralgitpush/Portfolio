@@ -35,6 +35,7 @@
 - Agora, desenvolvi alguns projetos paralelos na empresa e alguns deles estão expostos aqui.
 
 **---**
+
 **IGTI**
 
 - Participei de um processo seletivo para uma bolsa integral na instituição de ensino superior [IGTI](https://www.igti.com.br/); esta bolsa contemplava um bootcamp de 10 semanas para formação de Desenvolvedores Full Stack.
@@ -42,11 +43,13 @@
 - Felizmente ganhei a bolsa e nesta pasta encontram-se os projetos e desafios que resolvi ao longo do curso.
 
 **---**
+
 **Processos Seletivos Estágio**
 
 - Nesta pasta estão desafios de processos seletivos para o time de tecnologia de empresas que já participei.
 
 **---**
+
 **Santander Coders 2020**
 
 - Participei do [processo seletivo para a bolsa do Santander](https://www.becas-santander.com/pt/program/santandercodersjava2020) no curso da Digital House de SP. Uma das etapas do processo era um curso de JavaScript com um desafio ao final.
