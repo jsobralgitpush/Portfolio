@@ -99,10 +99,9 @@ espaço.
 
 Além de ser difícil de guardar todos, você percebeu que cada cartão tem uma
 data mensal para você pagar o que consumiu em crédito no último mês.
-Por exemplo, um cartão tem que ser pago todo dia 03 do mês e outro todo dia
-
-15. Um detalhe importante é que você pode pagar o cartão antes da data de
-    vencimento para liberar crédito.
+Por exemplo, um cartão tem que ser pago todo dia 03 do mês e outro todo dia 15.
+Um detalhe importante é que você pode pagar o cartão antes da data de
+vencimento para liberar crédito.
 
 Você prefere usar o cartão que está mais longe de vencer porque terá mais
 tempo para pagar a conta. Caso os dois cartões vençam no mesmo dia, você
