@@ -50,15 +50,22 @@ _var alunosDaSegunda = [10, -5, 3, 0];_
 
 Com essa informação e a quantidade mínima de estudantes para que suceda o curso, a professora quer saber se a aula acontecerá. Por exemplo, supondo que a quantidade mínima de estudantes para que a aula aconteça é de 2 alunos, então o curso da segunda-feira se realizará, porque houve um estudante que foi pontual e um estudante que chegou cedo.
 
-_acontece(alunosDaSegunda, 2)_
-**true**
+```
+>> acontece(alunosDaSegunda, 2)
+true
+```
 
 Mas se a quantidade mínima fosse 3, a aula não aconteceria:
 
-acontece(alunosDaSegunda, 3)
-**false**
+```
+>> acontece(alunosDaSegunda, 3)
+false
+
+```
 
 Escreva as seguintes funções: 1. acontece, que diz se a aula sucederá de acordo com o array dos estudantes que entraram. 2. aberturas, que utiliza um array com os arrays dos estudantes que entraram nos outros dias, e a quantidade mínima de estudantes, e diga quais os dias em que as aulas aconteceram e quais não. Por exemplo:
 
-aberturas([alunosDaSegunda, alunosDaTerça, alunosDaQuarta], 2)
+```
+>> aberturas([alunosDaSegunda, alunosDaTerça, alunosDaQuarta], 2)
 [true, false, false]
+```
