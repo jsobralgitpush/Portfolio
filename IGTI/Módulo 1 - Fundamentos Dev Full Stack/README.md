@@ -98,18 +98,3 @@ Os alunos deverão desempenhar as seguintes atividades:
     aplicação em funcionamento e dou mais algumas dicas.
 
 \*\* \*\*
-
-**Respostas Finais**
-
-Os alunos deverão desenvolver a prática e, depois, responder às
-seguintes questões objetivas:
-
-[Fazer o
-teste](https://igti.instructure.com/courses/2935/quizzes/34909/take?user_id=38152)
-
-[\*\*Anterior Anterior: Informações sobre o
-desafio](https://igti.instructure.com/courses/2935/modules/items/191175)
-[Próximo\*\* Próximo: Segunda Aula Interativa do Módulo
-1](https://igti.instructure.com/courses/2935/modules/items/190730)
-
-32c40000-8b5f-43cb-a898-d255b170e5a6
