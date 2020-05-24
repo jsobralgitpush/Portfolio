@@ -1,1 +1,15 @@
-Testando como vai ficar no layout do github essa budega...
+# Aqui estão os projetos que venho desenvolvendo :)
+
+**Codenation**
+
+**CS50 Harvard**
+
+**Disciplina metodos numericos**
+
+**Estágio Synoro**
+
+**IGTI**
+
+**Processos Seletivos**
+
+**Santander Coders 2020**
