@@ -1,0 +1,6 @@
+No meu estágio no grupo Synoro, tive que criar alguns scripts, usando diferentes bibliotecas, para mandar mensagens automáticas via whatsapp diariamente através do Jenkins. 
+No script, usei algumas formas como:
+-A biblioteca selenium para mandar mensagens via webdriver
+-A biblioteca Twillio (que é paga). 
+
+Todo o script foi feito pelo jupyter

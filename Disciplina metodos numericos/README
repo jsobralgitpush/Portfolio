@@ -1,0 +1,1 @@
+Fiz um projeto na faculdade cujo objetivo era modelar a temperatura de uma placa de aço após uma confecção siderúrgica. O objetivo do algoritmo era gerar um vetor de três dimensões, onde a primeira e a segunda dimensão fossem os eixos do placa (2D) e a terceira dimensão fosse a temperatura naquele ponto. 

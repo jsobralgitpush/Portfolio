@@ -1,0 +1,257 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
+#Exemplo do site
+
+
+# In[ ]:
+
+
+from hdx.utilities.easy_logging import setup_logging
+from hdx.hdx_configuration import Configuration
+from hdx.data.dataset import Dataset
+import pandas as pd
+from glob import glob
+import os
+from datetime import datetime as dt
+from config import env
+from utils import s3
+
+
+# In[ ]:
+
+
+#Setando as configurações
+Configuration.create(hdx_site='prod', user_agent='A_Quick_Example', hdx_read_only=True)
+
+
+# In[ ]:
+
+
+#Não ficou claro para o que isso serve
+dataset = Dataset.read_from_hdx('acled-conflict-data-for-africa-1997-lastyear')
+
+
+# In[ ]:
+
+
+#Para setarmos a nossa base de dados
+datasets = Dataset.search_in_hdx('ACLED', rows=10)
+resources = Dataset.get_all_resources(datasets)
+
+
+# In[ ]:
+
+
+#Fazer o download da base selecionado anteriormente
+url, path = resources[0].download()
+print('Resource URL %s downloaded to %s' % (url, path))
+
+
+# In[ ]:
+
+
+#**************************************************************************************************
+
+
+# In[ ]:
+
+
+#Início etapa extração
+
+
+# In[ ]:
+
+
+#**************************************************************************************************
+
+
+# In[ ]:
+
+
+#Dataset que selecionamos
+datasets = Dataset.search_in_hdx('JHU CSSE', rows=100)
+resources = Dataset.get_all_resources(datasets)
+
+#Com este comando conseguimos saber o nome dos datasets alterando o primeiro index do resources
+print(resources[2]['name'])
+
+
+# In[ ]:
+
+
+#fazendo o download dos datasets
+
+
+# In[ ]:
+
+
+# resources[0] = time_series_covid19_confirmed_global.csv
+url, path = resources[0].download()
+print('Resource URL %s downloaded to %s' % (url, path))
+
+
+# In[ ]:
+
+
+# resources[1] = time_series_covid19_deaths_global.csv
+url, path = resources[1].download()
+print('Resource URL %s downloaded to %s' % (url, path))
+
+
+# In[ ]:
+
+
+# resources[2] = time_series_covid19_recovered_global.csv
+url, path = resources[2].download()
+print('Resource URL %s downloaded to %s' % (url, path))
+
+
+# In[ ]:
+
+
+#**************************************************************************************************
+
+
+# In[ ]:
+
+
+#Fim do etapa de extração
+
+
+# In[ ]:
+
+
+#**************************************************************************************************
+
+
+# In[ ]:
+
+
+#Juntando os arquivos em apenas 1 CSV
+
+
+# In[ ]:
+
+
+#Nomeando o resource[0]
+os.rename(os.path.dirname(path)+'\\'+resources[0]['name']+'.csv','extracao_0.csv')
+
+
+# In[ ]:
+
+
+#Nomeando o resource[1]
+os.rename(os.path.dirname(path)+'\\'+resources[1]['name']+'.csv','extracao_1.csv')
+
+
+# In[ ]:
+
+
+#Nomeando o resource[2]
+os.rename(os.path.dirname(path)+'\\'+resources[2]['name']+'.csv','extracao_2.csv')
+
+
+# In[ ]:
+
+
+#Colocando os arquivos num array
+stock_files = sorted(glob('extracao_*.csv'))
+
+
+# In[ ]:
+
+
+#Criando o arquivo conjunto CSV
+csv_all = pd.concat((pd.read_csv(file).assign(filename = file) for file in stock_files), ignore_index = True)
+
+
+# In[ ]:
+
+
+#**************************************************************************************************
+
+
+# In[ ]:
+
+
+#Início da etapa de transformação
+    
+
+
+# In[ ]:
+
+
+#**************************************************************************************************
+
+
+# In[ ]:
+
+
+tablename = "corona_virus"'
+
+metadata = [
+    ['province_state', 'VARCHAR(500)'],
+    ['country_region', 'VARCHAR(500)'],
+    ['lat', 'NUMERIC(20,10)'],
+    ['long', 'NUMERIC(20,10)'],
+    ['date', 'DATE'],
+    ['confirmed', 'BIGINT'],
+    ['deaths', 'BIGINT'],
+    ['recovered', 'BIGINT']
+]
+
+
+# In[1]:
+
+
+def transform(data):
+    filepath = os.path.join(env.output, tablename, "{}.csv".format(dt.now().strftime("%Y-%m-%d_%H-%M-%S")))
+
+    print(">>>> Caminho para salvamento do arquivo: {}".format(filepath))
+    if not os.path.exists(os.path.join(env.output, tablename)):
+        print(">>>> Caminho ainda não existe. Criando pastas...")
+        os.makedirs(os.path.join(env.output, tablename))
+
+    print(">>>> Iniciando a inscrição dos dados no CSV")
+
+    data = data.fillna('NULL')
+
+    data[4] = pd.to_datetime(data[4])
+
+
+
+# In[ ]:
+
+
+#**************************************************************************************************
+
+
+# In[ ]:
+
+
+#Início da etapa de carga
+
+
+# In[ ]:
+
+
+#**************************************************************************************************
+
+
+# In[ ]:
+
+
+def load(filepath, metadata):
+
+    s3_path = "{}/{}/{}".format(env.s3_bucket, tablename, filepath.split(os.sep)[-1])
+    print(">>>> Realizando upload de dados para s3://{}".format(s3_path))
+    s3.upload(filepath, s3_path)
+    if not redshift.has_table(tablename):
+        print(">>>> Tabela stg.{} ainda não foi criada".format(tablename))
+        redshift.create_table(tablename, metadata)
+    print(">>>> Iniciando carga dos dados")
+    redshift.load(s3_path, tablename)
