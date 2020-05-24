@@ -1,0 +1,18 @@
+.square {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(0, 0, 0);
+  margin-left: 75px;
+}
+
+#cx-selecao-one {
+  width: 40px;
+}
+
+#cx-selecao-two {
+  width: 40px;
+}
+
+#cx-selecao-three {
+  width: 40px;
+}

@@ -1,0 +1,87 @@
+Eventos importantes
+  -input (toda vez que algo acontece)
+  -change 
+
+
+------------
+PASSOS A SEREM REALIZADOS
+
+HTML 
+  (x) Criar o botão de pesquisa
+  ( ) Criar uma linha que separe a busca dos resultados
+
+CSS
+  ( ) Alinhar a galera
+
+JS
+  ( ) Assim que digitarmos um caractere, queremos dar um find
+  nos dados importados
+        I) dar uma classe para o input e usar class.value
+  ( ) colocar um "keypress" para quando apertamos o enter 
+  ( ) Podemos usar um array.map() para retornarmos uma lista
+  com somente o nome e a idade das pessoas
+
+
+
+
+
+------------
+DÚVIDAS
+
+-Como damos o allign?
+
+
+------------
+EM AULA 
+1-JS MODERNO
+  a) LET vs CONST
+  b) conc strings
+  c) arrow function
+  d) default values nas funções
+
+2-Manipulação de arrays
+  a) map -> gera um novo array (IRADO)
+    exemplo:
+    const exemplo = people.map(person => {
+      return {
+        name: person.name,
+        email: person.email
+      }
+    }
+
+  b) filter -> gera novo array com base no filtro  (retorna array)
+    exemplo:
+    const olderThan50 = people.filter(person => {
+      return person.dob > 50
+    })
+
+
+  c) forEach -> Criamos um novo atributo no nosso vetor
+    exemplo:
+    const array.forEach(person => {
+      person.nameSize = ....
+    })
+
+  d) reduce -> "realiza calculo iterativo com base nos elementos" 
+    não vou copiar o exemplo porque é a cara de um forEach
+  
+
+  e) find -> encontra elementos (retorna string)
+
+  f) some -> verifica se há um elemento que atende proposição (é um find só que retorna apenas true e false)
+
+  g) every -> some só que todos (um some se que retorna true apenas se todos atenderem o critério)
+
+  h) sort -> ordena
+
+  3-Rest/ Spread operator e desctructing 
+a) Spread
+    const array1 = [1,2,3];
+    const array2 = [4,5,6];
+    const array3 = [...array1,...array2]
+
+b) Rest 
+
+
+c) desctructing
+const {nome, idade, etc} = people
