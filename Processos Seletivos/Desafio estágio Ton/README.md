@@ -1,7 +1,7 @@
 Olá!
 
 Seguem 03 desafios para você que se candidatou a vaga no Ton. Você deve
-escolher 0 1 desafio para solucionar nesta primeira etapa. Leia com atenção os
+escolher 1 desafio para solucionar nesta primeira etapa. Leia com atenção os
 desafios e escolha para qual irá apresentar sua solução.
 
 ## O que avaliaremos
@@ -27,7 +27,7 @@ Heroku
 
 # Desafio 01
 
-# Desafio Ton Tecnologia RC
+**Desafio Ton Tecnologia RC**
 
 O desafio que propomos é escrever uma API REST, usando Python, Node ou Java que
 realizará operações em um banco de dados de funcionários.
