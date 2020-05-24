@@ -1,14 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 #Exemplo do site
-
-
-# In[ ]:
-
 
 from hdx.utilities.easy_logging import setup_logging
 from hdx.hdx_configuration import Configuration
@@ -21,21 +11,14 @@ from config import env
 from utils import s3
 
 
-# In[ ]:
-
-
 #Setando as configurações
 Configuration.create(hdx_site='prod', user_agent='A_Quick_Example', hdx_read_only=True)
 
-
-# In[ ]:
 
 
 #Não ficou claro para o que isso serve
 dataset = Dataset.read_from_hdx('acled-conflict-data-for-africa-1997-lastyear')
 
-
-# In[ ]:
 
 
 #Para setarmos a nossa base de dados
@@ -43,33 +26,16 @@ datasets = Dataset.search_in_hdx('ACLED', rows=10)
 resources = Dataset.get_all_resources(datasets)
 
 
-# In[ ]:
-
-
 #Fazer o download da base selecionado anteriormente
 url, path = resources[0].download()
 print('Resource URL %s downloaded to %s' % (url, path))
 
 
-# In[ ]:
 
 
 #**************************************************************************************************
-
-
-# In[ ]:
-
-
-#Início etapa extração
-
-
-# In[ ]:
-
-
+#INICIO DA ETAPA DE EXTRACAO
 #**************************************************************************************************
-
-
-# In[ ]:
 
 
 #Dataset que selecionamos
@@ -80,21 +46,10 @@ resources = Dataset.get_all_resources(datasets)
 print(resources[2]['name'])
 
 
-# In[ ]:
-
-
 #fazendo o download dos datasets
-
-
-# In[ ]:
-
-
 # resources[0] = time_series_covid19_confirmed_global.csv
 url, path = resources[0].download()
 print('Resource URL %s downloaded to %s' % (url, path))
-
-
-# In[ ]:
 
 
 # resources[1] = time_series_covid19_deaths_global.csv
@@ -102,93 +57,45 @@ url, path = resources[1].download()
 print('Resource URL %s downloaded to %s' % (url, path))
 
 
-# In[ ]:
-
 
 # resources[2] = time_series_covid19_recovered_global.csv
 url, path = resources[2].download()
 print('Resource URL %s downloaded to %s' % (url, path))
 
 
-# In[ ]:
-
 
 #**************************************************************************************************
-
-
-# In[ ]:
-
-
-#Fim do etapa de extração
-
-
-# In[ ]:
-
-
+#FIM DA ETAPA DE EXTRACAO
 #**************************************************************************************************
-
-
-# In[ ]:
-
 
 #Juntando os arquivos em apenas 1 CSV
-
-
-# In[ ]:
 
 
 #Nomeando o resource[0]
 os.rename(os.path.dirname(path)+'\\'+resources[0]['name']+'.csv','extracao_0.csv')
 
 
-# In[ ]:
-
-
 #Nomeando o resource[1]
 os.rename(os.path.dirname(path)+'\\'+resources[1]['name']+'.csv','extracao_1.csv')
-
-
-# In[ ]:
 
 
 #Nomeando o resource[2]
 os.rename(os.path.dirname(path)+'\\'+resources[2]['name']+'.csv','extracao_2.csv')
 
 
-# In[ ]:
-
-
 #Colocando os arquivos num array
 stock_files = sorted(glob('extracao_*.csv'))
-
-
-# In[ ]:
 
 
 #Criando o arquivo conjunto CSV
 csv_all = pd.concat((pd.read_csv(file).assign(filename = file) for file in stock_files), ignore_index = True)
 
 
-# In[ ]:
-
 
 #**************************************************************************************************
-
-
-# In[ ]:
-
-
-#Início da etapa de transformação
-    
-
-
-# In[ ]:
-
-
+#INICIO DA ETAPA DE TRANSFORMACAO
 #**************************************************************************************************
 
-
-# In[ ]:
 
 
 tablename = "corona_virus"'
@@ -204,8 +111,6 @@ metadata = [
     ['recovered', 'BIGINT']
 ]
 
-
-# In[1]:
 
 
 def transform(data):
@@ -223,26 +128,9 @@ def transform(data):
     data[4] = pd.to_datetime(data[4])
 
 
-
-# In[ ]:
-
-
 #**************************************************************************************************
-
-
-# In[ ]:
-
-
-#Início da etapa de carga
-
-
-# In[ ]:
-
-
+#INICIO DA ETAPA DE CARGA
 #**************************************************************************************************
-
-
-# In[ ]:
 
 
 def load(filepath, metadata):
