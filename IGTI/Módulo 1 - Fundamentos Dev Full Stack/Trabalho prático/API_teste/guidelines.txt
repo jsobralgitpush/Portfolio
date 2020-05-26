@@ -1,0 +1,17 @@
+1-Busque os dados em https://restcountries.eu/rest/v2/all com fetch
+
+2-Transforme os dados  de forma que apenas os seguintes itens estejam disponíveis
+  a) Nome
+  b) Bandeira
+  c) População
+  d) id
+
+3-Mostre a quantidade total de paises e o total da população na lista
+
+4-Ao adicionar aos favoritos, o pais deve ser movido da esquerda para a direita
+
+5-Ao remover dos favoritos, o pais deve ser reinserido na lista da esquerda 
+
+6-As listas de paises devem ser sempre exibidas em ordem alfabetica 
+
+Paises (lista todos os paises) || Paises (favoritos)
