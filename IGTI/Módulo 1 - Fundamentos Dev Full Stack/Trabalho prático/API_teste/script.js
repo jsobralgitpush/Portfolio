@@ -1,47 +1,43 @@
-window.addEventListener('load', start) // continuar daqui => {
+window.addEventListener('load', start);
+
+var listaPaises = document.querySelector('.data1');
+var divPaises = document.querySelector('.nao-fav');
+
+function start() {
+  // Chamado da API
   fetch('https://restcountries.eu/rest/v2/all').then((res) => {
     res.json().then((data) => {
-      showData(data);
-      NFavCountries(showData(data));
-    });
+      return showData(data);
+    })
   });
 
-  var listaPaises = document.querySelector('.data1');
-  var divPaises = document.querySelector('.nao-fav');
-
-  start();
-});
+  console.log(newData);
+}
 
 function showData(data) {
-  var newData = data.map((person) => {
-    return {
+  data.map((person) => {
+    return newData =  {
       nome: person.name,
       id: person.numericCode,
       bandeira: person.flag,
       populacao: person.population,
     };
-  });
-
-  return newData;
 }
 
-function start() {
-  function NFavCountries(newData) {
-    for (let i = 0; i < newData.length; i++) {
-      var button = document.createElement('button');
-      var imageCountry = document.createElement('img');
-      var nameCountry = document.createElement('p');
-      var populacao = documento.createElement('p');
+/* function NFavCountries() {
+  for (let i = 0; i < showData(dataFromApi).length; i++) {
+    var button = document.createElement('button');
+    var imageCountry = document.createElement('img');
+    var nameCountry = document.createElement('p');
+    var populacao = documento.createElement('p');
 
-      imageCountry.src = newData[i].bandeira;
-      nameCountry.textContent = newData[i].nome;
-      populacao.textContent = newData[i].populacao;
+    imageCountry.src = newData[i].bandeira;
+    nameCountry.textContent = newData[i].nome;
+    populacao.textContent = newData[i].populacao;
 
-      listaPaises.appendChild(nameCountry);
-      listaPaises.appendChild(populacao);
-      listaPaises.appendChild(imageCountry);
-      listaPaises.appendChild(button);
-    }
+    listaPaises.appendChild(nameCountry);
+    listaPaises.appendChild(populacao);
+    listaPaises.appendChild(imageCountry);
+    listaPaises.appendChild(button);
   }
-  NFavCountries();
-}
+} */
