@@ -58,9 +58,9 @@ BitBucket
 AWS
 ```
 
-- Atualmente estou estagiando como engenheiro de dados nesta empresa chamada Synoro. Lá, na maior parte do tempo eu e minha equipe cuidamos de inúmeros processos de ETL da empresa. Os scripts que uso no dia a dia, eu compartilho aqui por motivos de privacidade.
+- Atualmente estou estagiando como engenheiro de dados nesta empresa chamada Synoro. Lá, na maior parte do tempo eu e minha equipe cuidamos de inúmeros processos de ETL da empresa. Os scripts que uso no dia a dia, eu não compartilho aqui por motivos de privacidade.
 
-- Agora, desenvolvi alguns projetos paralelos na empresa e alguns deles estão expostos aqui.
+- Contudo, estou desenvolvendo alguns projetos paralelos na empresa e eles estão expostos aqui.
 
 **---**
 
