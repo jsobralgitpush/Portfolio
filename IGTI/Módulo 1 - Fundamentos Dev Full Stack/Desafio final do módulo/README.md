@@ -1,4 +1,4 @@
-# Desafio do Módulo 1 {#quiz_title}
+# Desafio do Módulo 1
 
 - Entrega 27 mai em 17:00
 
