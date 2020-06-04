@@ -81,8 +81,6 @@ inseridos, seus endpoints devem trabalhar considerando a existência
 deles, não devendo criar um arquivo limpo para utilização. A estrutura
 do arquivo é a seguinte:
 
-![EDes.png](./Desafio%20do%20Módulo%202_%20Bootcamp%20Online%20-%20Desenvolvedor%20Full%20Stack_files/EDes.png)
-
 A propriedade nextId deve armazenar sempre o próximo id que será
 utilizado na criação de uma nova grade. A propriedade grades possui um
 array com várias grades, cada uma sendo representada por um objeto com
