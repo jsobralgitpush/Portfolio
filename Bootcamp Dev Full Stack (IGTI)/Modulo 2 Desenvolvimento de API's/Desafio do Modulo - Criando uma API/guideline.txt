@@ -1,0 +1,24 @@
+1-Criar um endpoint para criar uma nova grade
+  exemplo de grade
+  {"id":1,"student":"Loiane Groner","subject":"01 - JavaScript","type":"Fórum","value":15,"timestamp":"2020-05-19T18:21:24.958Z"}
+
+  a) Criar uma função que tem como parâmetro os itens desta nova grade 
+    I) id
+    II) student
+    III) subject
+    IV) type
+    V) value
+    VI) timestamp 
+
+  b) Como passamos parametros num endpoint?
+    student = req.params.student;
+    type = req.params.type;
+    value = req.params.value;
+    timestamp = new Date();
+
+  c) Como atualizamos o nextid?
+      grade.nextId = 50;
+
+      fs.writeFileSync('grades.json', JSON.stringify(grade));
+
+  d) Como fazemos para adicionar um elemento dentro da lista de grades?
