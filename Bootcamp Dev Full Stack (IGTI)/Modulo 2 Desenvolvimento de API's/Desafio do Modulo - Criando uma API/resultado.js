@@ -1,8 +1,8 @@
 // Puxando o arquivo de grades
 const grade = require('./grades.json');
 
+// Puxando modulos que usaremos durante a criação da API
 const fs = require('fs');
-
 const express = require('express');
 const app = express();
 const port = 8081;
@@ -10,13 +10,14 @@ const port = 8081;
 //  Sem este trecho não conseguiremos escrever no formato JSON
 app.use(express.json());
 
-// Testando a conexão
+// Testando a conexão GET
 app.get('/', (req, res) => {
-  a = JSON.stringify(grade['grades']);
+  teste = JSON.stringify(grade['grades']);
 
-  res.send(`${a}`);
+  res.send(`${teste}`);
 });
 
+// Testando a conexão POST
 app.post('/teste/:nome', (req, res) => {
   nome = req.params.nome;
 
@@ -122,8 +123,6 @@ app.get('/consultagrade/:id', (req, res) => {
   arrayGrade = grade['grades'];
   newGrade = arrayGrade.filter((itens) => itens.id == id);
 
-  console.log(newGrade);
-
   res.send(`${JSON.stringify(newGrade)}`);
 });
 
@@ -143,14 +142,53 @@ app.get('/consultanota/:student/:subject', (req, res) => {
     somaNotas += parseInt(newArray[i]['value']);
   }
 
-  console.log(newArray);
   res.send(`${somaNotas}`);
+});
+
+// 6-Consulta media de subject e type
+app.get('/consultamedia/:subject/:type', (req, res) => {
+  subject = req.params.subject;
+  type = req.params.type;
+
+  arrayGrade = grade['grades'];
+  newArrayGrade = arrayGrade.filter(
+    (itensArray) => itensArray.subject == subject && itensArray.type == type
+  );
+
+  somaGrade = 0;
+
+  for (let i = 0; i < newArrayGrade.length; i++) {
+    somaGrade += newArrayGrade[i]['value'];
+  }
+
+  mediaGrade = somaGrade / newArrayGrade.length;
+
+  res.send(`A média para dada subject e type é ${mediaGrade}`);
+});
+
+// 7-Retornar as melhores notas para determinada grade
+app.get('/melhoresgrade/:subject/:type', (req, res) => {
+  subject = req.params.subject;
+  type = req.params.type;
+
+  arrayGrade = grade['grades'];
+  newArrayGrade = arrayGrade.filter(
+    (itensArray) => itensArray.subject == subject && itensArray.type == type
+  );
+
+  listaNotas = [];
+
+  for (let i = 0; i < newArrayGrade.length; i++) {
+    listaNotas.push(newArrayGrade[i]['value']);
+  }
+
+  listaNotas.sort((a, b) => {
+    return b - a;
+  });
+
+  res.send([`${listaNotas[0]}`, `${listaNotas[1]}`, `${listaNotas[2]}`]);
 });
 
 app.listen(port, () => {
   console.log(`Conectado na porta ${port}`);
 });
-
-/* array = grade['grades'];
-newArray = array.filter((ids) => ids.id != 49);
-console.log(newArray); */
