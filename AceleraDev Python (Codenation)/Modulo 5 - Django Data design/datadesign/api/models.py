@@ -26,8 +26,8 @@ class Event(models.Model):
     #Na documentação, ele sugere colocarmos as "opções" em forma de tupla sendo:
     # a) O primeiro argumento a opção em forma de string que será colocada pelo user
     # b) O segundo argumento uma string com a "explicação" (human-readable) do campo.
-    LEVEL_CHOICES = [('CRITICAL','CRITICAL'), ('DEBUG','DEBUG'),
-                     ('ERROR','ERROR'), ('WARNING','WARNING'), ('INFO','INFO')]
+    LEVEL_CHOICES = [('CRITICAL','CRITICAL'), ('DEBUG','DEBUG'), ('ERROR','ERROR'),
+                     ('WARNING','WARNING'), ('INFO','INFO')]
 
     level = models.CharField('level', max_length=50, choices=LEVEL_CHOICES)
     data = models.TextField('data', null=True)
