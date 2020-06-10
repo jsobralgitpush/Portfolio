@@ -63,36 +63,22 @@ app.post('/gradenova/:student/:subject/:type/:value', (req, res) => {
 });
 
 // 2- Atualizar a grade
-app.post('/atualizargrade/:id/:student/:subject/:type/:value', (req, res) => {
-  nextId = grade['nextId'];
+app.delete('/atualizargrade/:id/:value', (req, res) => {
   id = req.params.id;
-  student = req.params.student;
-  subject = req.params.subject;
-  type = req.params.subject;
   value = req.params.value;
-  timestamp = new Date();
+
+  nextId = grade['nextId'];
 
   arrayGrades = grade['grades'];
-  newGrade = arrayGrades.filter((itens) => itens.id != id);
+  for (let i = 0; i < arrayGrades.length; i++) {
+    if (arrayGrades[i]['id'] == id) {
+      arrayGrades[i]['value'] = value;
+    }
+  }
 
-  toInsert = {
-    id: id,
-    student: student,
-    subject: subject,
-    type: type,
-    value: value,
-    timestamp: timestamp,
-  };
+  newGrade = { nextId: nextId, grades: [...arrayGrades] };
 
-  newGrade.push(toInsert);
-
-  newGrade.sort((a, b) => {
-    return a['id'] - b['id'];
-  });
-
-  newJson = { nextId: nextId, grades: [...newGrade] };
-
-  insertion = JSON.stringify(newJson);
+  insertion = JSON.stringify(newGrade);
 
   fs.writeFileSync('grades.json', insertion);
 
@@ -100,14 +86,14 @@ app.post('/atualizargrade/:id/:student/:subject/:type/:value', (req, res) => {
 });
 
 // 3-Excluir da grade
-app.post('deletegrade/:id', (req, res) => {
+app.post('/deletegrade/:id', (req, res) => {
   nextId = grade['nextId'];
   id = req.params.id;
 
   arrayGrade = grade['grades'];
   arrayGrade.filter((notas) => notas.id != id);
 
-  newJson = { nextId: nextId, grades: [...newGrade] };
+  newJson = { nextId: nextId, grades: [...arrayGrade] };
 
   insertion = JSON.stringify(newJson);
 
@@ -151,6 +137,7 @@ app.get('/consultamedia/:subject/:type', (req, res) => {
   type = req.params.type;
 
   arrayGrade = grade['grades'];
+
   newArrayGrade = arrayGrade.filter(
     (itensArray) => itensArray.subject == subject && itensArray.type == type
   );
@@ -158,7 +145,7 @@ app.get('/consultamedia/:subject/:type', (req, res) => {
   somaGrade = 0;
 
   for (let i = 0; i < newArrayGrade.length; i++) {
-    somaGrade += newArrayGrade[i]['value'];
+    somaGrade += parseInt(newArrayGrade[i]['value']);
   }
 
   mediaGrade = somaGrade / newArrayGrade.length;
@@ -179,11 +166,11 @@ app.get('/melhoresgrade/:subject/:type', (req, res) => {
   listaNotas = [];
 
   for (let i = 0; i < newArrayGrade.length; i++) {
-    listaNotas.push(newArrayGrade[i]['value']);
+    listaNotas.push([newArrayGrade[i]['value'], newArrayGrade[i]['id']]);
   }
 
   listaNotas.sort((a, b) => {
-    return b - a;
+    return b[0] - a[0];
   });
 
   res.send([`${listaNotas[0]}`, `${listaNotas[1]}`, `${listaNotas[2]}`]);
