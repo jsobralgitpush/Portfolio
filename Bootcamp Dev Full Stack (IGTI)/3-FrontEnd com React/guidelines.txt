@@ -1,0 +1,11 @@
+Aula 2.1
+-Virtual DOM
+-Criação de projetos com o create-react-app
+
+Aula 2.2
+-npx create-react-app --scripts-version 3.4.1 "nome do app"
+-Criação de várias dependencias;
+-Temos uma pasta "src" onde toda a magia acontece
+-react-scripts start para subirmos o nosso projeto
+-No app.js iremos construir os nossos blocos de layout. 
+-No index.js iremos renderizar estes blocos
