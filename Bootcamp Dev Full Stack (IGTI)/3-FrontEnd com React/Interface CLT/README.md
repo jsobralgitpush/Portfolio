@@ -1,4 +1,4 @@
-[](./Enunciado/1.jpg)
+![](Enunciado/1.jpg)
 
 
 ```
