@@ -6,12 +6,12 @@ export default class ProjetoBase extends Component {
     super(props)
 
     this.state = {
-      valueSalario: '',
-      baseInss: '',
-      descontoInss: '',
-      baseIrpf: '',
-      descontoIrpf: '',
-      netSalary: ''
+      valueSalario: 0,
+      baseInss: 0,
+      descontoInss: 0,
+      baseIrpf: 0,
+      descontoIrpf: 0,
+      netSalary: 0
     }
 
     this.handleSalario = this.handleSalario.bind(this);
