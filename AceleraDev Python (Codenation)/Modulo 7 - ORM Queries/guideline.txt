@@ -1,0 +1,19 @@
+FILTER
+
+from products.models import Product
+
+queryset = Products.objects.filter(name='Qualquer nome')
+
+print(queryset.query)
+
+Products.objects.filter(name__contains='uno)
+
+MANAGER
+...dentro do model que voce deseja fazer a query voce coloca...
+objects = ProductManager()
+
+...dentro do arquivo models...
+class ProductManager(models.Manager):
+    def with_text(self, text):
+        queryset = self.get_queryset().filter(name__contains=text)
+        return queryset
