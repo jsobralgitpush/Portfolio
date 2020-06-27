@@ -1,0 +1,105 @@
+Aula 2.1
+-Virtual DOM
+-Criação de projetos com o create-react-app
+
+Aula 2.2
+-npx create-react-app --scripts-version 3.4.1 "nome do app"
+-Criação de várias dependencias;
+-Temos uma pasta "src" onde toda a magia acontece
+-react-scripts start para subirmos o nosso projeto
+-No app.js iremos construir os nossos blocos de layout. 
+-No index.js iremos renderizar estes blocos
+
+Aula 3.4
+-Para exportar uma função de um arquivo fazemos
+  a) exports {"nome da função"}
+-Para que serve o { Component } do react?
+  a) Iremos criar Components para a nossa aplicação, por isso esta palavra :)
+-Dentro de render só podemos colocar um elemento, por isso costuma-se usar uma div
+-Para não copiarmos um arquivo e alterarmos ele indevidamente, fazemos
+  a) Object.assign("formato que queremos", "o que queremos")
+
+Aula 4
+-Para criarmos uma classe, fazemos:
+  class Animal {
+    constructor(name) {
+      this.name = name
+    }
+
+    "aqui vão os demais metodos da classe"
+  }
+
+-Para criarmos uma herança de classe, fazemos:
+  class Dog extends Animal {
+    constructor(name, type) {
+      super(name);
+
+      this.type = type
+    }
+  }
+
+Aula 5.1
+-O exports default é igual ao "React" da importação; caso tiremos o default, precisamos colocar o "App"
+entre {} na hora de fazer a importação em outro arquivo.
+-Podemos criar um arquivo para cada Component e este component entrará como uma tag <>. Da seguinte forma
+  export default class Component extends Component {
+    return {
+      <p>Teste<p>
+    }
+  }
+
+  ...No arquivo do app.js fazemos...
+
+  <Counter>
+
+-Podemos usar a nomenclatura rcc para copiarmos todo o codigo padrão de criação de um component
+
+
+Aula 5.2
+-Parece que quando criamos um Component, podemos passar um
+  constructor() {
+    super()
+
+    "definir metodos para o nosso componente" 
+  }
+
+-Temos que tomar cuidado com o JSX para não usarmos palavras reservadas do JS
+  a) Não usamos "class" e sim "className"
+  b) Também precisamos fechar todas as tags, inclusive aqueles que naturalmente não precisariam ser fechadas
+  como <img />
+
+-Para importarmos um css é igual um modulo qualquer do python
+  import css from "/caminho do arquivo"
+
+  quando formos usar, fazemos...
+    css."quem queremos"
+
+Aula 6.1
+-Dentro do construtor, precisamos criar um this.state para passar os "atributos" da componente. 
+-Com isso, fazemos:
+  constructor() {
+    super();  
+
+    this.state = {
+      "atributo1" = "valorAtributo1"
+      "atributo2" = "valorAtributo2"
+      
+    }
+
+  }
+
+Aula 6.2
+-Criação de "props"; essa parte foi mais complexa. Mas podemos fazer o seguinte:
+  a) Criar uma "propriedade" no nosso component fazendo:
+    this.props."nome da propriedade"
+
+  b) Dentro do arquivo que puxamos a nossa tag, colocar um atributo do tipo:
+    <"nome da tag criada" value ="aqui entrará a propriedade criada"
+  
+Aula 6.3
+
+
+
+------------------
+
+Todos os states em app.js
