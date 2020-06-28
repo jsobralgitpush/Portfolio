@@ -29,17 +29,6 @@ export default class App extends Component {
   }
 
 
-  renderRow = (montante) => {
-    for (let i = 0; i <= montante.length; i++) {
-      return (<BlocoJuros
-        numParcela={montante[i]['numParcela']}
-        montanteTotal={montante[i]['montanteTotal']}
-        ganhoMes={montante[i]['ganhoMes']}
-        ganhoPercentual={montante[i]['ganhoPercentual']} />)
-    }
-  }
-
-
   render() {
     const { valor, tempo, taxa } = this.state
 
