@@ -1,0 +1,133 @@
+AULA 1.3
+-mongod --dbpath="caminho" (startar o server do mongoDB)
+-mongo -host localhost:27017
+
+  ...lista de comandos...
+  db.help()
+
+  show dbs - mostras os databases existentes
+
+  db - verificar  a base que você está no momento
+
+  use "nome da base" - cria ou seleciona uma base de dados
+
+AULA 1.4
+  ...comandos...
+
+  db.createCollection("nome da coleção")
+
+  show collections
+
+  db."nome da coleção a ser criada".insert({"dados a serem inseridos"})
+
+  db."nome da coleção".drop()
+
+AULA 2
+  ...comandos...
+
+  db.student.insertOne({})
+  db.student.insertMany({})
+
+AULA 3
+  ...comandos...
+
+  *select all
+  db.COLLECTION.find()
+
+  *select com regras
+  db.COLLECTION.find(query, projection).limit().sort({crescente:1, desc: -1})
+  projection: {_id:0, name:1} - defini os campos que vc trará
+  query: {$and [subject:"Quimica",...]}
+
+AULA 4
+  ...comandos...
+
+  Operadores de Comparação
+  $eq
+  $gt
+  $gte
+  $in
+  $lt
+  $lte
+  $ne
+  $nin
+
+AULA 5
+  ...comandos...
+
+  db.COLLECTION.updateOne(query, update, options)
+  query: mesmo esquema do find
+  update: {$set: {}}, {$inc :{}}
+
+  *isso não funcionou na aula não
+  db.student.updateMany({}, {$set: {lastmodified:"$$NOW"})
+
+  db.student.updateMany({}, {$currentDate: {}})
+
+  db.student.updateMany({}, {$unset: {timestamp:1}})
+
+  Se for procurar pelo ID, temos que dar um ObjectId
+
+  db.student.replaceOne({_id: ObjectId("ID")}, {campos que voce quer alterar})
+
+AULA 6
+  ...comandos...
+
+  db.COLLECTION.deleteOne(filter,)
+
+
+AULA 7
+  ...comandos...
+
+  db.COLLECTION.bulkWrite([operacao1, operacao2], options)
+
+  db.student.bulkWrite( [{insertOne: { "document" {name:.., timestamp: new Date()} }])
+
+
+Aula 1.7.1
+  ...comandos...
+
+  db.livros.createIndex({biografia: "text"})
+
+  db.livros.find({$text: {$search: "escritora jornalista"}})
+
+AULA 2.
+-Cadastro no site para acessar o MongoDB Atlas
+-Colocar nosso IP na whitelist
+
+
+AULA 2.2 - Aqui começa a ficar bom
+-npm install mongodb
+-mudar o password da string url
+-ele trouxe um parametro chamado:
+  useUnifiedTopology: true
+
+-deu um "async (err)" e um
+  const documents = await collection.find().toArray()
+
+AULA 2.3 - Mongoose
+-Ele da um npm init -y para começar o projeto...que porra é essa?
+
+  import mongoose from 'mongoose';
+
+  await mongoose.connect("string fornecida no Atlas", {
+    use..
+    use..
+  })
+
+  const studentSchema = mongoose.Schema({
+
+    name: {
+      type: String,
+      require: 
+    }
+  })
+
+  mongoose.model('student', studentSchema)
+
+  const student = mongoose.model('student')
+
+  new student({
+
+
+  }).save() 
