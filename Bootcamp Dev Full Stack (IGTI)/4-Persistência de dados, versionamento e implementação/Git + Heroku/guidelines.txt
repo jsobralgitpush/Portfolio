@@ -24,3 +24,33 @@ console.log(process.env.USERDB)
 
 3.5 
 "pull request" dentro do github conseguimos mergear dois branchs
+
+4 - Heroku
+  ...comandos...
+
+  heroku login 
+
+4.1 - Heroku 
+  ...comandos...
+
+  heroku create
+  (quando fazemos isso, podemos dar um "git remote -v" e ver que temos um 
+  branch com o deploy do heroku)
+
+  git push heroku master
+  
+  heroku ps:scale web=1
+
+  heroku open
+
+  ...para fazermos alterações no nosso algortimo...
+
+  1-(alteração)
+  2-git commit -m 
+  3-git push heroku master
+
+
+  ...ERROR npm missing start script
+
+  1-criar um arquivo propfile e colocar
+    web: node index.js
