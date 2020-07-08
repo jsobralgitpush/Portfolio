@@ -1,0 +1,26 @@
+3.1 - Intro ao git
+
+3.3 - Fluxo de comandos
+-Bem importante
+
+3.4 - comandos
+  ...comandos...
+
+git branch (vemos o branchs ativos)
+git checkout -b "Nome do branch" (cria branch)
+git checkout "Nome do branch" (muda para o branch)
+git merge "Nome do branch" (junta o master)
+
+3.5 - Não passando as variaveis de ambiente para o git
+-npm install dotenv
+-criamos um arquivo .env
+  a) setamos nossas variáveis de ambiente
+-require('dotenv').settings()
+
+...podemos escolher quando será carregado pelo arquivo .env ou por linha de comandos...
+if  (process.env.PRD !== 'true') require('dotenv').config()
+
+console.log(process.env.USERDB)
+
+3.5 
+"pull request" dentro do github conseguimos mergear dois branchs
