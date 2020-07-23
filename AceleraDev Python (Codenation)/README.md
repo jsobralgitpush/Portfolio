@@ -1,1 +1,1 @@
-![](Certificado/certificado.png)
+![](Certificado/certificado.PNG)
