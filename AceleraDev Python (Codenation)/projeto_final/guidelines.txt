@@ -1,0 +1,17 @@
+
+2-criar um endpoint que será usado para gravar os logs de erro em um banco de dados relacional
+
+  'api/users/
+  'api/users/{id}
+  'api/token/'
+  'api/errors/'
+  'api/errors/{id}'
+
+  ...para isso...
+
+  a) Precisamos criar no sqlite3 os schemas dessa galera
+  b) Dentro de views, criar cada endpoint
+
+3 - a API deve ser segura, permitindo acesso apenas com um token de autenticação válido
+
+  *usar um token qualquer
