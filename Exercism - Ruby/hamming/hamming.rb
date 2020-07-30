@@ -1,8 +1,23 @@
-=begin
-Write your code for the 'Hamming' exercise in this file. Make the tests in
-`hamming_test.rb` pass.
+module Hamming
+  def self.compute(dna,mutation)
+    dna = dna.split('')
+    mutation = mutation.split('')
 
-To get started with TDD, see the `README.md` file in your
-`ruby/hamming` directory.
-=end
+    counter = 0
 
+    if dna.length() != mutation.length()
+      raise ArgumentError
+    end
+
+    i = 0 
+    while i != dna.length()
+      if dna[i] != mutation[i]
+        counter +=1
+      end
+      i +=1
+    end
+
+    return counter
+  end
+
+end
