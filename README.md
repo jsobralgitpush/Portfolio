@@ -81,6 +81,18 @@ Heroku
 
 **---**
 
+**Exercism - Ruby**
+
+```
+Ruby
+```
+
+- A plataforma do [Exercism] (https://exercism.io/tracks/ruby) conta com 98 exercícios em Ruby, em ordem progressiva de dificuldade,  num modelo de ensino self-paced.
+- Nesta pasta está o meu progresso nesta trilha de aprendizado
+
+
+**---**
+
 **Processos Seletivos Estágio**
 
 ```
