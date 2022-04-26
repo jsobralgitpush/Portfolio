@@ -1,8 +1,7 @@
-# Aqui estão os projetos que venho desenvolvendo :)
+# Here are key projects in my training :)
 
 ```
-* Nesta caixa estarão as ferramentas que usei nos arquivos de cada pasta
-```
+* In this box will be the tools I used in the files of each folder
 
 **Codenation**
 
@@ -11,9 +10,9 @@ Python
 Django
 ```
 
-- Participei de um [processo seletivo da Codenation em parceria com a Stone](https://canaltech.com.br/cursos/stone-e-codenation-oferecem-cursos-online-gratuitos-de-programacao-163961/) para um programa de 10 semanas de aceleração de desenvolvedores python.
+- I participated in a selection process by Codenation in partnership with Stone for a 10-week python developer acceleration program.
 
-- Felizmente passei no programa e nesta pasta encontram-se os projetos que desenvolvi ao longo dessa jornada.
+- Fortunately I passed the program and in this folder are the projects I developed along this journey.
 
 **---**
 
@@ -28,25 +27,25 @@ CSS
 JavaScript
 ```
 
-- Para melhorar minha base de computação, comecei a fazer o [curso CS50 online de Harvard](https://cs50.harvard.edu/x/2020/), de 10 semanas. Ao longo do curso trabalhamos diversos conceitos de computação (algoritmos, estrutura de dados, memoria computacional, etc) e, ao final de cada semana, temos que entregar um conjunto de desafios que compilam o conteúdo do módulo da semana.
+- To improve my computing base, I started taking the 10-week [Harvard CS50 online course](https://cs50.harvard.edu/x/2020/). Throughout the course we work on several computing concepts (algorithms, data structure, computational memory, etc) and, at the end of each week, we have to deliver a set of challenges that compile the content of the module of the week.
 
-- Tem sido uma experiência bastante desafiadora (e muito divertida).
+- It was quite a challenging (and a lot of fun) experience.
 
-- Nesta pasta encontram-se a resolução dos desafios que fiz até então. Até o presente momento, já fiz 7 dos 10 desafios.
+- In this folder are the resolution of my challenges
 
 **---**
 
-**Disciplina metodos numericos**
+**College Subject of numerical methods**
 
 ```
 MatLab
 ```
 
-- Cursei uma disciplina na faculdade chamada Metodos Numericos e, no final desta disciplina, tive que criar um projeto em MatLab (ou Octave) de minha escolha.
+- I took a course at college called Numerical Methods and, at the end of this course, I had to create a MatLab (or Octave) project of my choice.
 
-- Escolhi estudar sobre o comportamento de uma placa de aço após sua confeccção numa Sidúrgica.
+- I chose to study the behavior of a steel plate after its manufacture in a steel mill
 
-- Com isso, meu programa deveria, dado as condições de saída do forno da placa, modelar o resfriamento da placa ao longo do tempo e de dois eixos.
+- With that, my program should, given the conditions of the slab oven output, model the slab cooling over time and in two axes.
 
 **---**
 
@@ -58,9 +57,9 @@ BitBucket
 AWS
 ```
 
-- Atualmente estou estagiando como engenheiro de dados nesta empresa chamada Synoro. Lá, na maior parte do tempo eu e minha equipe cuidamos de inúmeros processos de ETL da empresa. Os scripts que uso no dia a dia, eu não compartilho aqui por motivos de privacidade.
+- I worked as a developer in this company called Synoro. There, most of the time my team and I took care of the company's numerous ETL processes. The scripts I use on a daily basis, I do not share here for privacy reasons.
 
-- Contudo, estou desenvolvendo alguns projetos paralelos na empresa e eles estão expostos aqui.
+- However, I developed some side projects in the company and they are exposed here.
 
 **---**
 
@@ -75,9 +74,9 @@ React JS
 Heroku
 ```
 
-- Participei de um processo seletivo para uma bolsa integral na instituição de ensino superior [IGTI](https://www.igti.com.br/); esta bolsa contemplava um bootcamp de 10 semanas para formação de Desenvolvedores Full Stack.
+- I participated in a selection process for a full scholarship at the higher education institution [IGTI](https://www.igti.com.br/); this scholarship contemplated a 10-week bootcamp for training Full Stack Developers.
 
-- Felizmente ganhei a bolsa e nesta pasta encontram-se os projetos e desafios que resolvi ao longo do curso.
+- Fortunately I won the scholarship and in this folder are the projects and challenges that I solved during the course
 
 **---**
 
@@ -87,19 +86,20 @@ Heroku
 Ruby
 ```
 
-- A plataforma do [Exercism](https://exercism.io/tracks/ruby) conta com 98 exercícios em Ruby, em ordem progressiva de dificuldade,  num modelo de ensino self-paced.
-- Nesta pasta está o meu progresso nesta trilha de aprendizado
+- The [Exercism](https://exercism.io/tracks/ruby) platform has 98 exercises in Ruby, in progressive order of difficulty, in a self-paced teaching model.
+
+- In this folder is my progress on this learning path
 
 
 **---**
 
-**Processos Seletivos Estágio**
+**Internship Selection Processes**
 
 ```
 Python
 ```
 
-- Nesta pasta estão desafios de processos seletivos para o time de tecnologia de empresas que já participei.
+- In this folder are challenges of selection processes for the technology team of companies that I have participated in.
 
 **---**
 
@@ -109,6 +109,6 @@ Python
 JavaScript
 ```
 
-- Participei do [processo seletivo para a bolsa do Santander](https://www.becas-santander.com/pt/program/santandercodersjava2020) no curso da Digital House de SP. Uma das etapas do processo era um curso de JavaScript com um desafio ao final.
+- I participated in the [selection process for the Santander scholarship](https://www.becas-santander.com/pt/program/santandercodersjava2020) at the Digital House course in SP. One of the steps in the process was a JavaScript course with a challenge at the end.
 
-- Aqui se encontra meu desafio resolvido.
+- Here is my challenge solved.
