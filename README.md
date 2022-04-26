@@ -1,7 +1,8 @@
 # Here are key projects in my training :)
 
 ```
-*In this box will be the tools I used in the files of each folder*
+In this box will be the tools I used in the files of each folder
+```
 
 **Codenation**
 
